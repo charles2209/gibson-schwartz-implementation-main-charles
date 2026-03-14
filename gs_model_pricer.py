@@ -1,5 +1,4 @@
 from __future__ import annotations
-
 from dataclasses import dataclass
 from math import exp, log, sqrt, erf
 from typing import Literal
@@ -192,7 +191,6 @@ def price_option_on_future_gibson_schwartz(
 
 
 # ---------- Example usage ----------
-# ---------- Example usage avec tes vrais paramètres ----------
 
 if __name__ == "__main__":
     # Tes paramètres calibrés
@@ -205,14 +203,14 @@ if __name__ == "__main__":
         rho=0.3553,
     )
 
-    S0 = 82.10  # Prix spot de ton dernier Excel
-    delta0 = 0.0512 # Exemple de yield actuel
+    S0 = 82.10  # Spot price example
+    delta0 = 0.0512 # yield example
 
     print("=" * 70)
     print("GIBSON-SCHWARTZ : TEST AVEC PARAMÈTRES RÉELS")
     print("=" * 70)
     
-    # Option 3 mois sur un futur 1 an
+    # 3 month call option on a future that expires in 6 months after the option expiry
     h, u = 0.25, 0.75
     K = 80.0
     
